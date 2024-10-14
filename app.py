@@ -9,6 +9,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
+from numpy import inf
 from googletrans import Translator
 
 # Load environment variables
