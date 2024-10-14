@@ -5,7 +5,10 @@ from dotenv import load_dotenv
 import nltk
 from nltk.tokenize import word_tokenize
 from collections import Counter
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+import numpy as np
 from googletrans import Translator
 
 # Load environment variables
@@ -15,7 +18,7 @@ load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Download NLTK data
-nltk.download('punkt')
+nltk.download('punkt', quiet=True)
 
 # Initialize translator
 translator = Translator()
@@ -58,7 +61,7 @@ def detect_ai_content(text, lang):
     Text: {english_text}"""
     
     response = openai.ChatCompletion.create(
-        model="gpt-4o-mini",
+        model="gpt-4o-mini", 
         messages=[
             {"role": "system", "content": "You are an AI detector. Analyze the given text and provide percentages for AI-generated and human-written content, along with key indicators and potential sources."},
             {"role": "user", "content": prompt}
