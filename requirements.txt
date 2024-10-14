@@ -1,7 +1,11 @@
 streamlit==1.22.0
-openai==0.27.8
+torch
+transformers==4.30.2
 python-dotenv==1.0.0
+huggingface_hub==0.14.1
+accelerate==0.20.3
+openai==0.27.8
 nltk==3.8.1
-matplotlib==3.5.3
+matplotlib==3.7.1
 googletrans==3.1.0a0
-numpy==1.26.0
+numpy==1.21.4
