@@ -1,12 +1,3 @@
-streamlit
-torch
-transformers
-python-dotenv
-huggingface_hub
-accelerate
-openai
-nltk
-matplotli
-googletrans
-numpy
-tokenizers
+streamlit==1.24.0
+torch==2.0.1
+transformers==4.30.2
