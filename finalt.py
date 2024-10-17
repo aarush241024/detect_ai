@@ -5,6 +5,7 @@ from transformers import RobertaTokenizer, RobertaForSequenceClassification
 import nltk
 from nltk.tokenize import word_tokenize, sent_tokenize
 
+nltk.download('punkt_tab')
 # Set page config at the very beginning
 st.set_page_config(page_title="Advanced AI Content Detector", page_icon="🤖", layout="wide")
 
